@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
-require "./lib/tennis_racquets.rb"
+require "bundler/setup"
+require "tennis_racquets"
+
 
 puts "Let's check out some tennis racquets!"
+
+TennisRacquets::CLI.new.call
