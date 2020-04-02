@@ -5,9 +5,9 @@ def self.racquet_scraper
   doc = Nokogiri::HTML(open(url))
   
   section = doc.css("div#content_wrap")
-  racquet = section.css("a.name")
-  price = section.css("span.price").text
-  description = section.css("p").text
+  #racquet = section.css("a.name").
+  #price = section.css("span.price").text
+  #description = section.css("p").text
   section.each do |n|
     name = n.css("a.name").text
     price = n.css("span.price").text

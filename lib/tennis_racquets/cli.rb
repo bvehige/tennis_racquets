@@ -6,20 +6,7 @@ class TennisRacquets::CLI
     list_racquets
     menu
     goodbye
-  
   end
-
-
-
-
-#def call
-#get_dogs 
-#list_dogs
-#menu
-#goodbye
-##Paws::Paws_scraper.dog_scraper
-  
-#end
 
   def get_racquets
     @racquets = TennisRacquets::Racquet.all 
@@ -41,7 +28,7 @@ class TennisRacquets::CLI
   input = gets.strip
    
    if input.to_i > 0 
-    the_racquet = @racquet[input.to_i-1]
+    the_racquet = @racquets[input.to_i-1]
      puts "#{the_racquet.name}"
      puts "#{the_racquet.price}"
      puts "#{the_racquet.description}"
