@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "./lib/tennis_racquets.rb"
+
+puts "Let's check out some tennis racquets!"
