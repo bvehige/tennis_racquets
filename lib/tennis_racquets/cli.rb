@@ -1,23 +1,31 @@
 class TennisRacquets::CLI 
+  
+  attr_accessor :racquets
 
   def call
-    puts "Welcome to the Head used tennis racquet market!"
     get_racquets
-    list_racquets
     menu
     goodbye
   end
 
   def get_racquets
-    @racquets = TennisRacquets::Racquet.all 
+    puts "Welcome to the Head used tennis racquet market!"
+    puts "Here's a list of used Head tennis racquets for sale."
+    puts "Please make a select the number to see more information about that racquet."
+    @racquets = TennisRacquets::Racquet.all
+    @racquets.each.with_index(1) do |racquet, i|
+     puts "#{i}. #{racquet.name} -" 
+   end
   end
 
   def list_racquets
-    puts "Here's a list of used Head tennis racquets for sale."
-    puts "Please make a select the number to see more information about that racquet."
-     @racquets.each.with_index(1) do |racquet, i|
-     puts "#{i}. #{racquet.name}" 
-     end
+    get_racquets
+    #puts "Welcome to the Head used tennis racquet market!"
+    #puts "Here's a list of used Head tennis racquets for sale."
+    #puts "Please make a select the number to see more information about that racquet."
+     #@racquets.each.with_index(1) do |racquet, i|
+     #puts "#{i}. #{racquet.name} -" 
+     #end
    end
 
  def menu
@@ -30,8 +38,8 @@ class TennisRacquets::CLI
    if input.to_i > 0 
     the_racquet = @racquets[input.to_i-1]
      puts "#{the_racquet.name}"
-     puts "#{the_racquet.price}"
-     puts "#{the_racquet.description}"
+     #puts "#{the_racquet.price}"
+     #puts "#{the_racquet.description}"
      #puts "#{the_dog.size}"
      #puts "#{the_dog.color}"
      #puts "#{the_dog.bio}"

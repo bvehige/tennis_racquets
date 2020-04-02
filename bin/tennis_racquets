@@ -3,6 +3,6 @@ require "bundler/setup"
 require "tennis_racquets"
 
 
-puts "Let's check out some tennis racquets!"
+#puts "Let's check out some tennis racquets!"
 
 TennisRacquets::CLI.new.call

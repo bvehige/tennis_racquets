@@ -4,10 +4,10 @@ attr_accessor :name, :price, :description
 
 @@all = []
 
-def initialize(name, price, description)
+def initialize(name)
   @name = name
-  @price = price
-  @description = description
+  #price = price
+  #@description = description
   save
 end
 
